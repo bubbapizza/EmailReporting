@@ -20,7 +20,6 @@ namespace EmailReporting
             try
             {
                 var membershipReport = Builder.GetMembershipReportHtml();
-                Console.WriteLine(membershipReport);
                 EmailHelper.SendToDirectors("Membership Status Report", membershipReport);
             }
             catch (Exception ex)

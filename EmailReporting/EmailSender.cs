@@ -10,12 +10,12 @@ namespace EmailReporting
         {
             var error = "<h2>" + ex.Message +"</h2>" + "<p>" + ex.StackTrace?.Replace("\n","<br/>") + "</p>";
 
-            SendEmail("Error in reporting", error, "IT", "nsteel@metamakers.org");
+            SendEmail("Error in reporting", error, "IT Support", "it@metamakers.org");
         }
 
         public static void SendToDirectors(string subject, string body)
         {
-            SendEmail(subject, body, "Directors", "nsteel@metamakers.org");
+            SendEmail(subject, body, "Directors", "directors@metamakers.org");
         }
 
         private static void SendEmail(string subject, string body, string toName, string toEmail)
